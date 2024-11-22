@@ -5,10 +5,11 @@ import matplotlib.pyplot as plt
 import os
 from sklearn import preprocessing, metrics
 import tensorflow as tf
-from tensorflow.keras.layers import (
+from tensorflow.keras.layers import 
+(
     Layer, 
     Dense, 
-    LayerNormalization,  # Explicitly import LayerNormalization
+    LayerNormalization,  
     Input,
     Dropout,
     Bidirectional,
