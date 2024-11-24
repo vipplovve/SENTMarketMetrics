@@ -11,12 +11,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import GridSearchCV
 
-grid = {
-    'C': [0.1, 1, 10, 100],
-    'kernel': ['linear', 'rbf', 'poly', 'sigmoid'],
-    'gamma': ['scale', 'auto']  
-}
-
 os.system('cls')
 
 def Partition(dataframe):
@@ -81,6 +75,12 @@ os.system('cls')
 
 print("The Dataset: -\n")
 print(Dataset.head(), '\n')
+
+grid = {
+    'C': [0.1, 1, 10, 100],
+    'kernel': ['linear', 'rbf', 'poly', 'sigmoid'],
+    'gamma': ['scale', 'auto']  
+}
 
 svm = SVC(probability=True)
 grid_search = GridSearchCV(svm, grid, cv=3, scoring='accuracy', verbose=2)

@@ -107,7 +107,7 @@ for epoch in range(epochs):
 
 error_log_df = pd.DataFrame(error_log)
 error_log_df.to_csv("False.csv", index=False)
-print("\nError log saved to 'False.csv'.")
+print("\nError log saved to 'ErrorsBiLSTM.csv'.")
 
 PlotErrorsPerEpoch(error_log)
 
